@@ -4,6 +4,9 @@
  */
 package com.hcs.healtcaresolution;
 
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author Sheppard
@@ -27,16 +30,73 @@ public class PannelloConnesso extends javax.swing.JPanel {
     private void initComponents() {
 
         jAccesso = new javax.swing.JPanel();
+        jBottonePaziente = new javax.swing.JButton();
+        jBottoneCareGiver = new javax.swing.JButton();
+        jBottoneInfermiere = new javax.swing.JButton();
+        jBottoneDottore = new javax.swing.JButton();
+        jBottoneIndietro = new javax.swing.JButton();
+
+        jAccesso.setBackground(new java.awt.Color(102, 102, 102));
+
+        jBottonePaziente.setText("Paziente");
+        jBottonePaziente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jBottonePazienteMouseClicked(evt);
+            }
+        });
+
+        jBottoneCareGiver.setText("Caregiver");
+
+        jBottoneInfermiere.setText("Infermiere");
+
+        jBottoneDottore.setText("Dottore");
+        jBottoneDottore.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBottoneDottoreActionPerformed(evt);
+            }
+        });
+
+        jBottoneIndietro.setText("Indietro");
+        jBottoneIndietro.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jBottoneIndietroMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jAccessoLayout = new javax.swing.GroupLayout(jAccesso);
         jAccesso.setLayout(jAccessoLayout);
         jAccessoLayout.setHorizontalGroup(
             jAccessoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 564, Short.MAX_VALUE)
+            .addGroup(jAccessoLayout.createSequentialGroup()
+                .addGroup(jAccessoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jAccessoLayout.createSequentialGroup()
+                        .addGap(42, 42, 42)
+                        .addGroup(jAccessoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jBottoneCareGiver, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jBottonePaziente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(97, 97, 97)
+                        .addGroup(jAccessoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jBottoneInfermiere, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jBottoneDottore, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(jAccessoLayout.createSequentialGroup()
+                        .addGap(136, 136, 136)
+                        .addComponent(jBottoneIndietro)))
+                .addContainerGap(327, Short.MAX_VALUE))
         );
         jAccessoLayout.setVerticalGroup(
             jAccessoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 437, Short.MAX_VALUE)
+            .addGroup(jAccessoLayout.createSequentialGroup()
+                .addGap(106, 106, 106)
+                .addGroup(jAccessoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBottonePaziente)
+                    .addComponent(jBottoneDottore))
+                .addGap(44, 44, 44)
+                .addComponent(jBottoneIndietro)
+                .addGap(41, 41, 41)
+                .addGroup(jAccessoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBottoneInfermiere)
+                    .addComponent(jBottoneCareGiver))
+                .addContainerGap(211, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -44,18 +104,54 @@ public class PannelloConnesso extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jAccesso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 12, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jAccesso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(jAccesso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBottoneDottoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBottoneDottoreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBottoneDottoreActionPerformed
+
+    private void jBottoneIndietroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBottoneIndietroMouseClicked
+        // TODO add your handling code here:
+        JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(this);
+        frame.getContentPane().removeAll();
+        
+        //Instanza di Registrati
+        PaginaBenvenuto regis = new PaginaBenvenuto();
+        frame.getContentPane().add(regis);
+        
+        frame.revalidate();
+        frame.repaint();
+    }//GEN-LAST:event_jBottoneIndietroMouseClicked
+
+    private void jBottonePazienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBottonePazienteMouseClicked
+        // TODO add your handling code here:
+        JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(this);
+        frame.getContentPane().removeAll();
+        
+        //Instanza di Registrati
+        PannelloPaziente regis = new PannelloPaziente();
+        frame.getContentPane().add(regis);
+        
+        frame.revalidate();
+        frame.repaint();
+    }//GEN-LAST:event_jBottonePazienteMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jAccesso;
+    private javax.swing.JButton jBottoneCareGiver;
+    private javax.swing.JButton jBottoneDottore;
+    private javax.swing.JButton jBottoneIndietro;
+    private javax.swing.JButton jBottoneInfermiere;
+    private javax.swing.JButton jBottonePaziente;
     // End of variables declaration//GEN-END:variables
 }

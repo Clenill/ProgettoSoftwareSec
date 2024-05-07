@@ -43,6 +43,11 @@ public class PaginaBenvenuto extends javax.swing.JPanel {
         bottoneRegistrati.setBackground(new java.awt.Color(120, 120, 120));
         bottoneRegistrati.setForeground(new java.awt.Color(255, 255, 255));
         bottoneRegistrati.setText("Registrati");
+        bottoneRegistrati.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bottoneRegistratiMouseClicked(evt);
+            }
+        });
 
         bottoneAccedi.setBackground(new java.awt.Color(120, 120, 120));
         bottoneAccedi.setForeground(new java.awt.Color(255, 255, 255));
@@ -121,6 +126,19 @@ public class PaginaBenvenuto extends javax.swing.JPanel {
         frame.repaint();
         
     }//GEN-LAST:event_bottoneAccediMouseClicked
+
+    private void bottoneRegistratiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bottoneRegistratiMouseClicked
+        // TODO add your handling code here:
+        JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(this);
+        frame.getContentPane().removeAll();
+        
+        //Instanza di Registrati
+        Registrati regis = new Registrati();
+        frame.getContentPane().add(regis);
+        
+        frame.revalidate();
+        frame.repaint();
+    }//GEN-LAST:event_bottoneRegistratiMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

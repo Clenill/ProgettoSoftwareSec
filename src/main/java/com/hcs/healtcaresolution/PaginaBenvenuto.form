@@ -90,6 +90,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Registrati"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="bottoneRegistratiMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="bottoneAccedi">
           <Properties>
