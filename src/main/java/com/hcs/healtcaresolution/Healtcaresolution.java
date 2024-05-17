@@ -29,7 +29,7 @@ public class Healtcaresolution {
         frame.getContentPane().add(schermataBenvenuto);
         //adatta le dimensioni del frame al componente
         //frame.pack();//non funziona bene 
-        frame.setSize(430, 510);
+        frame.setSize(450, 700);
         //centra la finestra sullo schermo
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
@@ -37,3 +37,4 @@ public class Healtcaresolution {
         
     }
 }
+
