@@ -1,25 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package com.hcs.healtcaresolution;
 
 import com.hcs.healtcaresolution.model.RaccoltaDati;
-import javax.swing.*;
+import javax.swing.JFrame;
 
-/**
- *
- * @author Sheppard
- */
 public class Healtcaresolution {
 
     public static void main(String[] args) {
-        //Creazione e connessione al db
-        //ricordati di chiudere connessione e statemant 
-        //i metodi statici sono risolti a compile-time
-        RaccoltaDati.creazioneDatabase();//metodo static della classe RaccoltaDati
+        // Creazione e connessione al db
+        // Ricordati di chiudere connessione e statement
+        RaccoltaDati.creazioneDatabase(); // metodo static della classe RaccoltaDati
         
-        //Creazione e configurazione finestra principale
+        // Creazione e configurazione finestra principale
         JFrame frame = new JFrame("HealtCare Solution");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
@@ -27,14 +18,10 @@ public class Healtcaresolution {
         PaginaBenvenuto schermataBenvenuto = new PaginaBenvenuto();
         
         frame.getContentPane().add(schermataBenvenuto);
-        //adatta le dimensioni del frame al componente
-        //frame.pack();//non funziona bene 
+        // Adatta le dimensioni del frame al componente
         frame.setSize(450, 700);
-        //centra la finestra sullo schermo
+        // Centra la finestra sullo schermo
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
-        
-        
     }
 }
-
