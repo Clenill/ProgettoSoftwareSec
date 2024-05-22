@@ -1,14 +1,17 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package com.hcs.healtcaresolution;
 
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
 /**
  *
- * @author MrWhi
+ * @author Sheppard
  */
-public class PannelloConnesso extends javax.swing.JFrame {
+public class PannelloConnesso extends javax.swing.JPanel {
 
     /**
      * Creates new form PannelloConnesso
@@ -26,308 +29,215 @@ public class PannelloConnesso extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        medico = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        infermiere = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        caregiver = new javax.swing.JPanel();
-        Caregiver = new javax.swing.JLabel();
-        paziente = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        jAccesso = new javax.swing.JPanel();
+        jBottonePaziente = new javax.swing.JButton();
+        jBottoneCareGiver = new javax.swing.JButton();
+        jBottoneInfermiere = new javax.swing.JButton();
+        jBottoneDottore = new javax.swing.JButton();
+        jBottoneIndietro = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 0, 0));
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jAccesso.setBackground(new java.awt.Color(0, 0, 0));
 
-        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel1.setFont(new java.awt.Font("Arial Black", 0, 21)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel1.setText("Health System");
-
-        medico.setBackground(new java.awt.Color(204, 255, 255));
-        medico.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
-        medico.setForeground(new java.awt.Color(0, 0, 0));
-        medico.addMouseListener(new java.awt.event.MouseAdapter() {
+        jBottonePaziente.setBackground(new java.awt.Color(0, 0, 0));
+        jBottonePaziente.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        jBottonePaziente.setForeground(new java.awt.Color(255, 255, 255));
+        jBottonePaziente.setText("Paziente");
+        jBottonePaziente.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 3, true));
+        jBottonePaziente.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                medicoMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                medicoMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                medicoMouseExited(evt);
+                jBottonePazienteMouseClicked(evt);
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Medico");
-
-        javax.swing.GroupLayout medicoLayout = new javax.swing.GroupLayout(medico);
-        medico.setLayout(medicoLayout);
-        medicoLayout.setHorizontalGroup(
-            medicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(medicoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        medicoLayout.setVerticalGroup(
-            medicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, medicoLayout.createSequentialGroup()
-                .addContainerGap(38, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(36, 36, 36))
-        );
-
-        infermiere.setBackground(new java.awt.Color(204, 255, 255));
-        infermiere.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
-        infermiere.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                infermiereMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                infermiereMouseExited(evt);
+        jBottoneCareGiver.setBackground(new java.awt.Color(0, 0, 0));
+        jBottoneCareGiver.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        jBottoneCareGiver.setForeground(new java.awt.Color(255, 255, 255));
+        jBottoneCareGiver.setText("Caregiver");
+        jBottoneCareGiver.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 3, true));
+        jBottoneCareGiver.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jBottoneCareGiverMouseClicked(evt);
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Infermiere");
-
-        javax.swing.GroupLayout infermiereLayout = new javax.swing.GroupLayout(infermiere);
-        infermiere.setLayout(infermiereLayout);
-        infermiereLayout.setHorizontalGroup(
-            infermiereLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(infermiereLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        infermiereLayout.setVerticalGroup(
-            infermiereLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(infermiereLayout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addComponent(jLabel3)
-                .addContainerGap(45, Short.MAX_VALUE))
-        );
-
-        caregiver.setBackground(new java.awt.Color(204, 255, 255));
-        caregiver.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
-        caregiver.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                caregiverMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                caregiverMouseExited(evt);
+        jBottoneInfermiere.setBackground(new java.awt.Color(0, 0, 0));
+        jBottoneInfermiere.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        jBottoneInfermiere.setForeground(new java.awt.Color(255, 255, 255));
+        jBottoneInfermiere.setText("Infermiere");
+        jBottoneInfermiere.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 3, true));
+        jBottoneInfermiere.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jBottoneInfermiereMouseClicked(evt);
             }
         });
 
-        Caregiver.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        Caregiver.setForeground(new java.awt.Color(0, 0, 0));
-        Caregiver.setText("Caregiver");
-
-        javax.swing.GroupLayout caregiverLayout = new javax.swing.GroupLayout(caregiver);
-        caregiver.setLayout(caregiverLayout);
-        caregiverLayout.setHorizontalGroup(
-            caregiverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(caregiverLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Caregiver)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        caregiverLayout.setVerticalGroup(
-            caregiverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(caregiverLayout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(Caregiver)
-                .addContainerGap(44, Short.MAX_VALUE))
-        );
-
-        paziente.setBackground(new java.awt.Color(204, 255, 255));
-        paziente.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
-        paziente.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                pazienteMouseEntered(evt);
+        jBottoneDottore.setBackground(new java.awt.Color(0, 0, 0));
+        jBottoneDottore.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        jBottoneDottore.setForeground(new java.awt.Color(255, 255, 255));
+        jBottoneDottore.setText("Medico");
+        jBottoneDottore.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 3, true));
+        jBottoneDottore.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jBottoneDottoreMouseClicked(evt);
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                pazienteMouseExited(evt);
+        });
+        jBottoneDottore.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBottoneDottoreActionPerformed(evt);
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("Paziente");
+        jBottoneIndietro.setBackground(new java.awt.Color(0, 0, 0));
+        jBottoneIndietro.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        jBottoneIndietro.setForeground(new java.awt.Color(255, 0, 0));
+        jBottoneIndietro.setText("Indietro");
+        jBottoneIndietro.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        jBottoneIndietro.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jBottoneIndietroMouseClicked(evt);
+            }
+        });
 
-        javax.swing.GroupLayout pazienteLayout = new javax.swing.GroupLayout(paziente);
-        paziente.setLayout(pazienteLayout);
-        pazienteLayout.setHorizontalGroup(
-            pazienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pazienteLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel5)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        pazienteLayout.setVerticalGroup(
-            pazienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pazienteLayout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(jLabel5)
-                .addContainerGap(43, Short.MAX_VALUE))
-        );
+        jLabel9.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel9.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel9.setText("HEALTH CARE MANAGEMENT\n");
 
-        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\MrWhi\\Pictures\\jkjk.png")); // NOI18N
-        jLabel6.setText("jLabel6");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(155, 155, 155)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(medico, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(infermiere, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(caregiver, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(paziente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(37, 37, 37)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 369, Short.MAX_VALUE)))
-                .addGap(35, 35, 35))
+        javax.swing.GroupLayout jAccessoLayout = new javax.swing.GroupLayout(jAccesso);
+        jAccesso.setLayout(jAccessoLayout);
+        jAccessoLayout.setHorizontalGroup(
+            jAccessoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jAccessoLayout.createSequentialGroup()
+                .addGroup(jAccessoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jAccessoLayout.createSequentialGroup()
+                        .addGap(42, 42, 42)
+                        .addGroup(jAccessoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jAccessoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jBottoneCareGiver, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jBottonePaziente, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jBottoneDottore, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jBottoneInfermiere, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jAccessoLayout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(jLabel9))
+                    .addGroup(jAccessoLayout.createSequentialGroup()
+                        .addGap(148, 148, 148)
+                        .addComponent(jBottoneIndietro)))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jLabel1)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(medico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(infermiere, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(caregiver, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(paziente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(55, 55, 55)
-                        .addComponent(jLabel6)))
-                .addContainerGap(61, Short.MAX_VALUE))
+        jAccessoLayout.setVerticalGroup(
+            jAccessoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jAccessoLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(jLabel9)
+                .addGap(31, 31, 31)
+                .addComponent(jBottonePaziente, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jBottoneDottore, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jBottoneCareGiver, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jBottoneInfermiere, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(jBottoneIndietro)
+                .addGap(52, 52, 52))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jAccesso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jAccesso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
-
-        pack();
     }// </editor-fold>                        
 
-    private void medicoMouseClicked(java.awt.event.MouseEvent evt) {                                    
+    private void jBottoneIndietroMouseClicked(java.awt.event.MouseEvent evt) {                                              
         // TODO add your handling code here:
+        JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(this);
+        frame.getContentPane().removeAll();
         
-    }                                   
+        //Instanza di Registrati
+        PaginaBenvenuto regis = new PaginaBenvenuto();
+        frame.getContentPane().add(regis);
+        
+        frame.revalidate();
+        frame.repaint();
+    }                                             
 
-    private void medicoMouseEntered(java.awt.event.MouseEvent evt) {                                    
+    private void jBottonePazienteMouseClicked(java.awt.event.MouseEvent evt) {                                              
         // TODO add your handling code here:
-        medico.setBackground(java.awt.Color.decode("#deedee"));
-    }                                   
+        JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(this);
+        frame.getContentPane().removeAll();
+        
+        //Instanza di Registrati
+        PannelloPaziente regis = new PannelloPaziente();
+        frame.getContentPane().add(regis);
+        
+        frame.revalidate();
+        frame.repaint();
+    }                                             
 
-    private void infermiereMouseEntered(java.awt.event.MouseEvent evt) {                                        
+    private void jBottoneInfermiereMouseClicked(java.awt.event.MouseEvent evt) {                                                
         // TODO add your handling code here:
-        infermiere.setBackground(java.awt.Color.decode("#deedee"));
-    }                                       
+        JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(this);
+        frame.getContentPane().removeAll();
 
-    private void caregiverMouseEntered(java.awt.event.MouseEvent evt) {                                       
+        //Instanza di Registrati
+        PannelloPaziente regis = new PannelloPaziente();
+        frame.getContentPane().add(regis);
+
+        frame.revalidate();
+        frame.repaint();
+    }                                               
+
+    private void jBottoneCareGiverMouseClicked(java.awt.event.MouseEvent evt) {                                               
         // TODO add your handling code here:
-        Caregiver.setBackground(java.awt.Color.decode("#deedee"));
-    }                                      
+        JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(this);
+        frame.getContentPane().removeAll();
 
-    private void pazienteMouseEntered(java.awt.event.MouseEvent evt) {                                      
+        //Instanza di Registrati
+        PannelloPaziente regis = new PannelloPaziente();
+        frame.getContentPane().add(regis);
+
+        frame.revalidate();
+        frame.repaint();
+    }                                              
+
+    private void jBottoneDottoreActionPerformed(java.awt.event.ActionEvent evt) {                                                
         // TODO add your handling code here:
-       paziente.setBackground(java.awt.Color.decode("#deedee"));
-    }                                     
+    }                                               
+                            
 
-    private void medicoMouseExited(java.awt.event.MouseEvent evt) {                                   
+    private void jBottoneDottoreMouseClicked(java.awt.event.MouseEvent evt) {                                             
         // TODO add your handling code here:
-       medico.setBackground(java.awt.Color.WHITE);
-    }                                  
+        JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(this);
+        frame.getContentPane().removeAll();
 
-    private void infermiereMouseExited(java.awt.event.MouseEvent evt) {                                       
-        // TODO add your handling code here:
-        infermiere.setBackground(java.awt.Color.WHITE);
-    }                                      
+        //Instanza di Registrati
+        PannelloPaziente regis = new PannelloPaziente();
+        frame.getContentPane().add(regis);
 
-    private void caregiverMouseExited(java.awt.event.MouseEvent evt) {                                      
-        // TODO add your handling code here:
-        caregiver.setBackground(java.awt.Color.WHITE);
-    }                                     
+        frame.revalidate();
+        frame.repaint();
+    }                                            
 
-    private void pazienteMouseExited(java.awt.event.MouseEvent evt) {                                     
-        // TODO add your handling code here:
-        paziente.setBackground(java.awt.Color.WHITE);
-    }                                    
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PannelloConnesso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PannelloConnesso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PannelloConnesso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PannelloConnesso.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> {
-            new PannelloConnesso().setVisible(true);
-        });
-    }
 
     // Variables declaration - do not modify                     
-    private javax.swing.JLabel Caregiver;
-    private javax.swing.JPanel caregiver;
-    private javax.swing.JPanel infermiere;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel medico;
-    private javax.swing.JPanel paziente;
+    private javax.swing.JPanel jAccesso;
+    private javax.swing.JButton jBottoneCareGiver;
+    private javax.swing.JButton jBottoneDottore;
+    private javax.swing.JButton jBottoneIndietro;
+    private javax.swing.JButton jBottoneInfermiere;
+    private javax.swing.JButton jBottonePaziente;
+    private javax.swing.JLabel jLabel9;
     // End of variables declaration                   
 }
